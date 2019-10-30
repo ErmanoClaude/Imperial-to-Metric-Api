@@ -52,10 +52,12 @@ function ConvertHandler() {
 }
 
 module.exports = ConvertHandler;
-
-var input = '32g2gal';
-var regex =  /(^[0-9]+)(\w+)/;
+var result;
+var input = 'g32g2gal';
+var regex =  /(^\d+)(\w+)/;
 var anotherRegrex = /([a-z]+$)/
-var holder = input.match(anotherRegrex);
+var holder = input.match(regex);
 console.log(holder);
-
+if(holder = null){
+  result = {error:'invalid number'}
+}
