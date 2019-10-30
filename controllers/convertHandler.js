@@ -53,8 +53,9 @@ function ConvertHandler() {
 
 module.exports = ConvertHandler;
 
-var input = '32g2al';
+var input = '32g2gal';
 var regex =  /(^[0-9]+)(\w+)/;
-var anotherRegrex = /(\w+$)/
+var anotherRegrex = /([a-z]+$)/,$1
 var holder = input.match(anotherRegrex);
 console.log(holder);
+console.log(input.split(holder[0]));
