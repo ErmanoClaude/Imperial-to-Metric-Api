@@ -10,7 +10,17 @@ function ConvertHandler() {
   this.allUnits = ['gal','L','lbs','kg','mi','km']
   this.getNum = function(input) {
     var result;
-    
+    input = input.replace(/\s/g, "");
+    var match = input.match(/(\w*?)([a-zA-z]+$)/);
+    if(input && match == null){
+      result = 'invalid number'
+    } else if(!input){
+      result = 'invalid number'
+    } else if( isNaN(Number(match[1])) ){
+      result = 'invalid number';
+    } else {
+      result = Number(match[1]);
+    }
     return result;
   };
   
@@ -25,7 +35,6 @@ function ConvertHandler() {
         result = unit[0]
         result = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
     }
-
     return result;
   };
   
