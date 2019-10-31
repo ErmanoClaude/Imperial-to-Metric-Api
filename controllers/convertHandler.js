@@ -7,7 +7,7 @@
 */
 
 function ConvertHandler() {
-  
+  this.allUnits = ['gal','L','lbs','kg','mi','km']
   this.getNum = function(input) {
     var result;
     
@@ -16,9 +16,16 @@ function ConvertHandler() {
   
   this.getUnit = function(input) {
     var result;
-    
-    
-    
+    var unit = input.match(/[a-zA-Z]+$/)
+    if(!input){
+        result = ''
+    } else if(unit == null){
+        result = 'there is no unit'
+    } else if(unit){
+        result = unit[0]
+        result = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
+    }
+
     return result;
   };
   
