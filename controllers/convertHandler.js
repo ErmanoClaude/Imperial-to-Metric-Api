@@ -35,7 +35,9 @@ function ConvertHandler() {
       var matchedUnit;
       result = unit[0]
       matchedUnit = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
-      
+      if(matchedUnit.length == 0 ){
+        result = 'invalid unit'
+      }
     }
     return result;
   };
