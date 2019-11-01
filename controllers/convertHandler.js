@@ -28,18 +28,20 @@ function ConvertHandler() {
     var result;
     var unit = input.match(/[a-zA-Z]+$/)
     if(!input){
-        result = ''
+      result = ''
     } else if(unit == null){
-        result = 'there is no unit'
+      result = 'there is no unit'
     } else if(unit){
-        result = unit[0]
-        result = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
+      
+      result = unit[0]
+      result = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
     }
     return result;
   };
   
   this.getReturnUnit = function(initUnit) {
     var result;
+    
     
     return result;
   };
