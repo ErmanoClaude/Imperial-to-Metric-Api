@@ -32,11 +32,13 @@ function ConvertHandler() {
     } else if(unit == null){
       result = 'no unit'
     } else if(unit){
-      var matchedUnit;
+      var matchedUnit = [];
       result = unit[0]
       matchedUnit = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
       if(matchedUnit.length == 0 ){
         result = 'invalid unit'
+      } else {
+        result = matchedUnit[0];
       }
     }
     return result;
