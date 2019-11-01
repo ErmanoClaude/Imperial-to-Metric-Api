@@ -71,18 +71,3 @@ function ConvertHandler() {
 }
 
 module.exports = ConvertHandler;
-var result;
-var input = '23 gal';
-var regex =  /(^\d+)(\w+)/;
-var anotherRegrex = /([a-z]+$)/
-var holder = input.match(regex);
-console.log(holder);
-if(input=''){
-  result = {error:"invalid number and unit"}
-} else if(holder = null){
-  result = {error:'invalid number'}
-} else if(/^[a-zA-Z]+/.test(input)) {
-  result = {error:"invalid number"}
-} 
-
-console.log('we3334d'.match(/^[a-zA-Z]+/))
