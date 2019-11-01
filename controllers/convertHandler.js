@@ -30,11 +30,12 @@ function ConvertHandler() {
     if(!input){
       result = ''
     } else if(unit == null){
-      result = 'there is no unit'
+      result = 'no unit'
     } else if(unit){
-      
+      var matchedUnit;
       result = unit[0]
-      result = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
+      matchedUnit = this.allUnits.filter((item)=> result.toUpperCase() === item.toUpperCase());
+      
     }
     return result;
   };
