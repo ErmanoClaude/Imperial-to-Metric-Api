@@ -28,7 +28,9 @@ module.exports = function (app) {
       console.log('returnUnit: '+ returnUnit)
       
       if(returnNum ='error'){
-        //if(input ='' || )
+        if(input =''){
+          res.json({error:'no input'})
+        } //else if()
       }
     });
     
