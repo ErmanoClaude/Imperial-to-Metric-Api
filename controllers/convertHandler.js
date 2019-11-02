@@ -89,8 +89,8 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result =``;
-    
+    var result =`${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit}`;
+    //"56 pounds converts to 25.40115 kilograms"
     return result;
   };
   
