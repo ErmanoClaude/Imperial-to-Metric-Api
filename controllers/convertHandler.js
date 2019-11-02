@@ -73,8 +73,9 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
     var result;
-    
-    
+    if(initNum =='invalid number' || initUnit == 'no unit' || initUnit == 'invalid unit'){
+      return 'error'
+    }
     
     
     return result;
