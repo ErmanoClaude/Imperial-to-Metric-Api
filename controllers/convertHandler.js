@@ -63,8 +63,9 @@ function ConvertHandler() {
 
   this.spellOutUnit = function(unit) {
     var result;
+    var longUnit = ['gallons','liters','pounds','kilograms','miles','kilometers'];
     
-    return result;
+    return longUnit[this.allUnits.indexOf(unit)];
   };
   
   this.convert = function(initNum, initUnit) {
@@ -72,6 +73,12 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
     var result;
+    
+    switch(initUnit){
+      case 'no unit': result = initUnit,;
+      case 'invalid'
+    }
+    
     
     return result;
   };
