@@ -76,13 +76,20 @@ function ConvertHandler() {
     if(initNum =='invalid number' || initUnit == 'no unit' || initUnit == 'invalid unit'){
       return 'error'
     }
+    switch(initUnit){
+      case 'gal': return initUnit * galToL;
+      case 'L': return initUnit / galToL;
+      case 'lbs': return initUnit * lbsToKg;
+      case 'kg': return initUnit / lbsToKg;
+      case 'mi': return initUnit * miToKm;
+      case 'km': return initUnit / miToKm;
+    }
     
-    
-    return result;
+  
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result;
+    var result =``;
     
     return result;
   };
