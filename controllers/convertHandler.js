@@ -74,7 +74,7 @@ function ConvertHandler() {
     const miToKm = 1.60934;
     var result;
     
-    if(initNum ==)
+    
     
     
     return result;
