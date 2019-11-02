@@ -28,7 +28,7 @@ module.exports = function (app) {
       console.log('returnUnit: '+ returnUnit)
       
       if(returnNum ='error'){
-        
+        if(input ='' || )
       }
     });
     
