@@ -46,9 +46,19 @@ function ConvertHandler() {
   
   this.getReturnUnit = function(initUnit) {
     var result;
-    
-    
-    return result;
+    var indexOf;
+    if(initUnit == 'no unit'){
+      return 'no unit'
+    } else if( initUnit == 'invalid unit'){
+      return 'invalid unit'
+    }
+
+    indexOf = this.allUnits.indexOf(initUnit);
+    if(indexOf % 2 == 1 ) {
+      return this.allUnits[indexOf - 1]
+    } else {
+      return this.allUnits[indexOf + 1]
+    }
   };
 
   this.spellOutUnit = function(unit) {
