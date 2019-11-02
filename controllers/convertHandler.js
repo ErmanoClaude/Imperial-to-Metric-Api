@@ -77,19 +77,19 @@ function ConvertHandler() {
       return 'error'
     }
     switch(initUnit){
-      case 'gal': return initUnit * galToL;
-      case 'L': return initUnit / galToL;
-      case 'lbs': return initUnit * lbsToKg;
-      case 'kg': return initUnit / lbsToKg;
-      case 'mi': return initUnit * miToKm;
-      case 'km': return initUnit / miToKm;
+      case 'gal': return initNum * galToL;
+      case 'L': return initNum / galToL;
+      case 'lbs': return initNum * lbsToKg;
+      case 'kg': return initNum / lbsToKg;
+      case 'mi': return initNum * miToKm;
+      case 'km': return initNum / miToKm;
     }
     
   
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result =`${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit}`;
+    var result =`${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`;
     //"56 pounds converts to 25.40115 kilograms"
     return result;
   };

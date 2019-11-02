@@ -26,8 +26,10 @@ module.exports = function (app) {
       console.log('initUnit: '+initUnit)
       console.log('returnNum: '+ returnNum)
       console.log('returnUnit: '+ returnUnit)
-      console.lo
-      res.json({message:toString})
+      
+      if(returnNum ='error'){
+        
+      }
     });
     
 };
