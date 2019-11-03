@@ -32,7 +32,17 @@ module.exports = function (app) {
           res.json({error:'invalid number and unit'});
         } else if((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number'){
           res.json({error:'invalid number and unit'});
-        } //else if()
+        } else if( initUnit == 'invalid unit'){
+          res.json({error:'invalid unit'})
+        } else if(initUnit == 'no unit'){
+          res.json({error:'no unit'})
+        } else if(initUnit == 'invalid unit'){
+          res.json({eorr:'invalid unit'})
+        } else if(initNum =='invalid number'){
+          res.json({eorr:'invalid number'})
+        } else{
+          
+        }
       }
     });
     

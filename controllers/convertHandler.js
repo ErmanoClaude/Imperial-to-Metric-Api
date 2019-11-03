@@ -19,12 +19,10 @@ function ConvertHandler() {
       result = 'invalid number'
     } else if( isNaN(Number(match[1])) ){
       result = 'invalid number';
-    } else if(match[1]= ''){
-      result = 'no number'
     } else {
       result = Number(match[1]);
     }
-    console.log(result + 'we are here broo don\'t worry about it')
+    
     return result;
     
   };
