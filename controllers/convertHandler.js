@@ -22,6 +22,7 @@ function ConvertHandler() {
       result = Number(match[1]);
     }
     return result;
+    
   };
   
   this.getUnit = function(input) {

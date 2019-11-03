@@ -29,8 +29,10 @@ module.exports = function (app) {
       
       if(returnNum =='error'){
         if(!input){
-          res.json({error:'invalid number and unit'})
-        } else if((initUnit == 'no unit' || initUnit =='invalid unit') && )
+          res.json({error:'invalid number and unit'});
+        } else if((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number'){
+          res.json({error:'invalid number and unit'});
+        } //else if()
       }
     });
     
