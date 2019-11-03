@@ -10,6 +10,7 @@ function ConvertHandler() {
   this.allUnits = ['gal','L','lbs','kg','mi','km']
   this.getNum = function(input) {
     var result;
+    if(Number(input)){}
     input = input.replace(/\s/g, "");
     var match = input.match(/(\w*?)([a-zA-z]+$)/);
     console.log(match)
