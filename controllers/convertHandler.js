@@ -10,13 +10,14 @@ function ConvertHandler() {
   this.allUnits = ['gal','L','lbs','kg','mi','km']
   this.getNum = function(input) {
     var result;
-    if(!isNaN(Number(input))){
-      return input;
-    }
+ 
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
     console.log(match)
-    if(input && match == null){
+    
+    if(!isNaN(Number(input))){
+      return input;
+    } else if(input && match == null){
       result = 'invalid number'
     } else if(!input){
       result = 'invalid number'
