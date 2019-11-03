@@ -12,6 +12,7 @@ function ConvertHandler() {
     var result;
     input = input.replace(/\s/g, "");
     var match = input.match(/(\w*?)([a-zA-z]+$)/);
+    console.log(match)
     if(input && match == null){
       result = 'invalid number'
     } else if(!input){
