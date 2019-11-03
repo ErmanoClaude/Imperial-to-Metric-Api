@@ -21,6 +21,7 @@ function ConvertHandler() {
     } else {
       result = Number(match[1]);
     }
+    console.log(result + 'we are here broo don\'t worry about it')
     return result;
     
   };
