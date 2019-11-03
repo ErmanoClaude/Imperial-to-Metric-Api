@@ -23,9 +23,11 @@ module.exports = function (app) {
       var returnNum = convertHandler.convert(initNum, initUnit);
       var returnUnit = convertHandler.getReturnUnit(initUnit);
       var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
+      console.log('initNum:' + initNum);
       console.log('initUnit: '+initUnit)
       console.log('returnNum: '+ returnNum)
       console.log('returnUnit: '+ returnUnit)
+      console.log((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number' )
       
       if(returnNum =='error'){
         if(!input){
