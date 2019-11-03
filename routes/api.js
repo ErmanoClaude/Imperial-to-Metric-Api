@@ -28,10 +28,9 @@ module.exports = function (app) {
       console.log('returnUnit: '+ returnUnit)
       
       if(returnNum =='error'){
-        console.log('we are in this bubble now');
-        if(!input && input !=0){
+        if(!input){
           res.json({error:'invalid number and unit'})
-        }
+        } else if((initUnit == 'no unit' || initUnit =='invalid unit') && )
       }
     });
     
