@@ -27,10 +27,11 @@ module.exports = function (app) {
       console.log('returnNum: '+ returnNum)
       console.log('returnUnit: '+ returnUnit)
       
-      if(returnNum ='error'){
-        if(input =''){
+      if(returnNum =='error'){
+        console.log('we are in this bubble now');
+        if(!input && input !=0){
           res.json({error:'invalid number and unit'})
-        } 
+        }
       }
     });
     
