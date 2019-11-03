@@ -14,7 +14,15 @@ function ConvertHandler() {
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
     console.log(match)
-    
+    try {
+      result = eval(match[1]);
+      if(result != undefined){
+        return result;
+      }
+    } catch {
+      //empty
+      console.log('nothing')
+    }
     if(!isNaN(Number(input))){
       return input;
     } else if(input && match == null){
