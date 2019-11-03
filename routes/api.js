@@ -31,6 +31,7 @@ module.exports = function (app) {
         if(!input){
           res.json({error:'invalid number and unit'});
         } else if((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number'){
+          console.log("for some reason we are here and i dont' know why")
           res.json({error:'invalid number and unit'});
         } else if( initUnit == 'invalid unit'){
           res.json({error:'invalid unit'})
@@ -40,9 +41,15 @@ module.exports = function (app) {
           res.json({eorr:'invalid unit'})
         } else if(initNum =='invalid number'){
           res.json({eorr:'invalid number'})
-        } else{
-          
         }
+      } else {
+        res.json({
+          initNum: initNum,
+          initUnit: initUnit,
+          returnNum: returnNum,
+          returnUnit: returnUnit,
+          string: toString
+          })
       }
     });
     
