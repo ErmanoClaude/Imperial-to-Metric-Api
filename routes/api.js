@@ -30,7 +30,7 @@ module.exports = function (app) {
       if(returnNum ='error'){
         if(input =''){
           res.json({error:'invalid number and unit'})
-        } //else if()
+        } 
       }
     });
     
