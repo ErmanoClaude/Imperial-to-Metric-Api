@@ -13,6 +13,7 @@ function ConvertHandler() {
  
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
+    console.log(match);
     try {
       result = eval(match[1]);
       if(result != undefined){
@@ -21,9 +22,12 @@ function ConvertHandler() {
     } catch {
       //empty dont need to do anything if try don't work
     }
-    if(!isNaN(Number(input))){
+    else if(input ==''){
+      result = 'invalid number'
+    } else if(!isNaN(Number(input))){
+      console.log('we are here 25')
       return input;
-    } else if(input && match == null){
+    } else if(input || match == null){
       result = 'invalid number'
     } else if(!input){
       result = 'invalid number'
@@ -105,13 +109,12 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result =`${this.round_to_precision(initNum)} ${this.spellOutUnit(initUnit)} converts to ${this.round_to_precision(returnNum)} ${this.spellOutUnit(returnUnit)}`;
+    var result =`${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`;
     //"56 pounds converts to 25.40115 kilograms"
     return result;
   };
   this.round_to_precision = function (x) {
     if(x % 1 != 0 && x!=undefined){
-      
       var count = x.toString().split(".")[1].length;
       if(count>5){
         return x.toFixed(5)
