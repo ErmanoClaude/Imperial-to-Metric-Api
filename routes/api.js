@@ -37,7 +37,7 @@ module.exports = function (app) {
         } else if(initUnit == 'invalid unit'){
           res.json({eorr:'invalid unit'})
         } else if(initNum =='invalid number'){
-          res.json({eorr:'invalid number'})
+          res.json({erorr:'invalid number'})
         }
       } else {
         res.json({
