@@ -6,7 +6,7 @@
 *       
 */
 
-function ConvertHandler() {
+function ConvertHandler() {  
   this.allUnits = ['gal','L','lbs','kg','mi','km']
   this.getNum = function(input) {
     var result;
