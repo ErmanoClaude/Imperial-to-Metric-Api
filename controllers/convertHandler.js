@@ -108,7 +108,9 @@ function ConvertHandler() {
     //"56 pounds converts to 25.40115 kilograms"
     return result;
   };
-  
+  this.setDecimalto5 = function(num){
+    
+  }
 }
 
 module.exports = ConvertHandler;
