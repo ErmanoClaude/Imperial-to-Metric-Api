@@ -13,7 +13,6 @@ function ConvertHandler() {
  
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
-    console.log(match);
     try {
       result = eval(match[1]);
       if(result != undefined){
@@ -22,10 +21,9 @@ function ConvertHandler() {
     } catch {
       //empty dont need to do anything if try don't work
     }
-    else if(input ==''){
+    if(input ==''){
       result = 'invalid number'
     } else if(!isNaN(Number(input))){
-      console.log('we are here 25')
       return input;
     } else if(input || match == null){
       result = 'invalid number'
@@ -36,7 +34,6 @@ function ConvertHandler() {
     } else {
       result = Number(match[1]);
     }
-    console.log(result);
     if(result == 0){
       return 1;
     }
