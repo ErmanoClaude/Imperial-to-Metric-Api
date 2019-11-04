@@ -30,12 +30,13 @@ suite('Unit Tests', function(){
     
     test('Fractional Input', function(done) {
       var input = '2/4lbs';
-      assert.equal = 
+      assert.equal(convertHandler.getNum(input), 2/4)
       done();
     });
     
     test('Fractional Input w/ Decimal', function(done) {
-      var input
+      var input = '3.4/2.4mi';
+      assert.eqaul(convertHandler.getNum(input), eval(3.4/24).toFixed(5))
       done();
     });
     

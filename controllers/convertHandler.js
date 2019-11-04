@@ -13,10 +13,6 @@ function ConvertHandler() {
  
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
-    
-    if(match[1]== ''){
-      return 1;
-    }
     try {
       result = eval(match[1]);
       if(result != undefined){
@@ -36,7 +32,10 @@ function ConvertHandler() {
     } else {
       result = Number(match[1]);
     }
-    
+    if(result == 0){
+      return 1;
+    }
+
     return result;
     
   };
@@ -110,6 +109,7 @@ function ConvertHandler() {
     return result;
   };
   this.round_to_precision = function (x) {
+    console.log(x);
     if(x % 1 != 0){
       var count = x.toString().split(".")[1].length;
       if(count>5){
