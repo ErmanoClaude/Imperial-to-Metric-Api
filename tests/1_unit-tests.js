@@ -48,8 +48,8 @@ suite('Unit Tests', function(){
     
     test('No Numerical Input', function(done) {
       var input = 'lbs'
-      assert.equal(convertHandler)
-      //done();
+      assert.equal(convertHandler.getNum(input),1)
+      done();
     }); 
     
   });

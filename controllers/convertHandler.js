@@ -16,13 +16,10 @@ function ConvertHandler() {
     try{
        var divisionCount = (input.match(/\//g) || []).length
        if(divisionCount > 1){
-         console.log('19')
          return 'invalid number'
        }
     } catch {
-      console.log('we expect to be here')
     }
-   
     try {
       result = eval(match[1]);
       if(result != undefined){
@@ -33,26 +30,20 @@ function ConvertHandler() {
     }
     if(input ==''){
       result = 'invalid number'
-      console.log('35')
     } else if(!isNaN(Number(input))){
       result = input;
-      console.log('37')
-    } else if(input || match == null){
+    } else if(input && match == null){
       result = 'invalid number'
-      console.log('41')
     } else if(!input){
       result = 'invalid number'
-      console.log('44')
     } else if( isNaN(Number(match[1])) ){
       result = 'invalid number';
-      console.log('47')
     } else {
       result = Number(match[1]);
     }
     if(result == 0){
       return 1;
     }
-
     return result;
     
   };
