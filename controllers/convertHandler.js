@@ -17,10 +17,10 @@ function ConvertHandler() {
     try {
       result = eval(match[1]);
       if(result != undefined){
-        return this.round_to_precision(result;
+        return this.round_to_precision(result);
       }
     } catch {
-      //empty
+      //empty dont need to do anything if try don't work
       console.log('nothing')
     }
     if(!isNaN(Number(input))){
@@ -92,15 +92,14 @@ function ConvertHandler() {
       return 'error'
     }
     switch(initUnit){
-      case 'gal': return initNum * galToL;
-      case 'L': return initNum / galToL;
-      case 'lbs': return initNum * lbsToKg;
-      case 'kg': return initNum / lbsToKg;
-      case 'mi': return initNum * miToKm;
-      case 'km': return initNum / miToKm;
+      case 'gal': return this.round_to_precision(initNum * galToL);
+      case 'L': return this.round_to_precision(initNum / galToL);
+      case 'lbs': return this.round_to_precision(initNum * lbsToKg);
+      case 'kg': return this.round_to_precision(initNum / lbsToKg);
+      case 'mi': return this.round_to_precision(initNum * miToKm);
+      case 'km': return this.round_to_precision(initNum / miToKm);
     }
     
-  
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
