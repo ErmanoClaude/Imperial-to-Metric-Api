@@ -104,12 +104,13 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result =`${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`;
+    var result =`${this.round_to_precision(initNum)} ${this.spellOutUnit(initUnit)} converts to ${this.round_to_precision(returnNum)} ${this.spellOutUnit(returnUnit)}`;
     //"56 pounds converts to 25.40115 kilograms"
     return result;
   };
-  this.setDecimalto5 = function(num){
-    
+  this.round_to_precision = function (x) {
+    var y = +x + (5 === undefined ? 0.5 : 5/2);
+    return y - (y % (5 === undefined ? 1 : +5));
   }
 }
 
