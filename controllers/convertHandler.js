@@ -109,9 +109,11 @@ function ConvertHandler() {
     return result;
   };
   this.round_to_precision = function (x) {
-    var y = +x + (5 === undefined ? 0.5 : 5/2);
-    return y - (y % (5 === undefined ? 1 : +5));
+    if(x % 1 != 0){
+      
+    } else return x
   }
+  
 }
 
 module.exports = ConvertHandler;
