@@ -17,7 +17,7 @@ function ConvertHandler() {
     try {
       result = eval(match[1]);
       if(result != undefined){
-        return result;
+        return this.round_to_precision(result;
       }
     } catch {
       //empty
@@ -110,7 +110,11 @@ function ConvertHandler() {
   };
   this.round_to_precision = function (x) {
     if(x % 1 != 0){
-      
+      var count = x.toString().split(".")[1].length;
+      console.log(count)
+      if(count>5){
+        return x.toFixed(5)
+      } else return x
     } else return x
   }
   
