@@ -13,6 +13,15 @@ function ConvertHandler() {
  
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
+    try{
+       var divisionCount = (input.match(/\//g) || []).length
+       if(divisionCount > 1){
+         return 'invalid number'
+       }
+    } catch {
+      
+    }
+   
     try {
       result = eval(match[1]);
       if(result != undefined){
