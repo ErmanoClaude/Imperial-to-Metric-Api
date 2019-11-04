@@ -13,7 +13,10 @@ function ConvertHandler() {
  
     input = input.replace(/\s/g, "");
     var match = input.match(/(.*?)([a-zA-z]+$)/);
-    console.log(match)
+    
+    if(match[1]== ''){
+      return 1;
+    }
     try {
       result = eval(match[1]);
       if(result != undefined){
@@ -21,7 +24,6 @@ function ConvertHandler() {
       }
     } catch {
       //empty dont need to do anything if try don't work
-      console.log('nothing')
     }
     if(!isNaN(Number(input))){
       return input;
@@ -110,7 +112,6 @@ function ConvertHandler() {
   this.round_to_precision = function (x) {
     if(x % 1 != 0){
       var count = x.toString().split(".")[1].length;
-      console.log(count)
       if(count>5){
         return x.toFixed(5)
       } else return x

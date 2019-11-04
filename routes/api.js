@@ -23,17 +23,12 @@ module.exports = function (app) {
       var returnNum = convertHandler.convert(initNum, initUnit);
       var returnUnit = convertHandler.getReturnUnit(initUnit);
       var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
-      console.log('initNum:' + initNum);
-      console.log('initUnit: '+initUnit)
-      console.log('returnNum: '+ returnNum)
-      console.log('returnUnit: '+ returnUnit)
-      console.log((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number' )
+
       
       if(returnNum =='error'){
         if(!input){
           res.json({error:'invalid number and unit'});
         } else if((initUnit == 'no unit' || initUnit =='invalid unit') &&  initNum=='invalid number'){
-          console.log("for some reason we are here and i dont' know why")
           res.json({error:'invalid number and unit'});
         } else if( initUnit == 'invalid unit'){
           res.json({error:'invalid unit'})
