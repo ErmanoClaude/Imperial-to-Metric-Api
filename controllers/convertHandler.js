@@ -32,6 +32,7 @@ function ConvertHandler() {
     } else {
       result = Number(match[1]);
     }
+    console.log(result);
     if(result == 0){
       return 1;
     }
@@ -109,8 +110,8 @@ function ConvertHandler() {
     return result;
   };
   this.round_to_precision = function (x) {
-    console.log(x);
-    if(x % 1 != 0){
+    if(x % 1 != 0 && x!=undefined){
+      
       var count = x.toString().split(".")[1].length;
       if(count>5){
         return x.toFixed(5)
